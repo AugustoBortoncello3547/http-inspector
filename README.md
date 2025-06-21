@@ -64,21 +64,6 @@ python main.py --iface "Realtek Gaming GbE Family Controller" --timeout 30
 
 ---
 
-## 📄 Saída esperada
-
-```
---- Análise HTTP ---
-IPs com mais requisições: [('192.168.0.5', 124), ...]
-Portas mais utilizadas: [((50234, 80), 98), ...]
-Tamanho médio dos pacotes HTTP: 412.5
-Total de requisições HTTP: 103
-Pacotes com possíveis credenciais: 2
-Pacotes malformados: 1
-Endereços com tráfego anormal: ['192.168.0.8']
-```
-
----
-
 ## 🧾 Licença
 
 Este projeto é open source sob a licença MIT.
