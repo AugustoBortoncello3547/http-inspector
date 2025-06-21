@@ -2,7 +2,7 @@
 
 Um analisador de tráfego HTTP em tempo real (ou via arquivos `.pcap`), desenvolvido em Python com a biblioteca `scapy`. O foco é facilitar a visualização de métricas relevantes e auxiliar na detecção de comportamentos suspeitos em redes locais.
 
-O projeto foi desenvolvido em ambiente acadêmico, na cadeira de Redes para o curso de ciência da computação da Universidade de Caxias do Sul.
+O projeto foi desenvolvido em ambiente acadêmico, na cadeira de Redes para o curso de Ciência da Computação da Universidade de Caxias do Sul.
 
 ---
 
