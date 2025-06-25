@@ -1,0 +1,111 @@
+<!-- templates/report_template.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatório Completo - Análise de Tráfego HTTP</title>
+    <link rel="stylesheet" href="static/style.css" />
+</head>
+
+<body>
+    <div class="header">
+        <h1>🔍 Relatório Completo de Análise de Tráfego HTTP</h1>
+        <p class="subtitle">Análise detalhada com visualizações interativas</p>
+        <p class="timestamp">Gerado em: {{ timestamp }}</p>
+    </div>
+
+    <div class="dashboard">
+        <div class="metric-card">
+            <div class="metric-icon">📊</div>
+            <div class="metric-value">{{ http_requests }}</div>
+            <div class="metric-label">Requisições HTTP</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-icon">🌐</div>
+            <div class="metric-value">{{ unique_ips}}</div>
+            <div class="metric-label">IPs Únicos</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-icon">📦</div>
+            <div class="metric-value">{{ packages }}</div>
+            <div class="metric-label">Total de Pacotes</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-icon">⚠️</div>
+            <div class="metric-value">{{ malformed_packages }}</div>
+            <div class="metric-label">Pacotes Malformados</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-icon">💾</div>
+            <div class="metric-value">{{ total }}</div>
+            <div class="metric-label">Volume Total</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📈 Gráficos Interativos</h2>
+        <div class="charts-container">
+            {{ graph_html }}
+        </div>
+    </div>
+
+    {{ security_alerts }}
+
+    <div class="section">
+        <h2>📊 Estatísticas Detalhadas</h2>
+        <div class="stats-grid">
+            {{ statistics }}
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🌐 Top IPs por Atividade</h2>
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Ranking</th>
+                        <th>IP Address</th>
+                        <th>Requisições</th>
+                        <th>Volume (bytes)</th>
+                        <th>Percentual</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ ip_table }}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🔌 Análise de Portas</h2>
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Porta Origem</th>
+                        <th>Porta Destino</th>
+                        <th>Conexões</th>
+                        <th>Tipo de Serviço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ ports_table }}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 HTTP Traffic Analyzer | Relatório gerado automaticamente</p>
+        <p>Para mais informações ou suporte, consulte a documentação do sistema.</p>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>
