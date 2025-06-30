@@ -77,7 +77,40 @@ python main.py --iface "Realtek Gaming GbE Family Controller" --timeout 30
 
 ## 🗂️ Divisão do código
 
+Todo o código vai estar dividido dentro da classe **HTTPTrafficAnalyzer**, segregando-se nas seguintes funções:
 
+### Funções principais
+
+| Função           | Descrição                                      | Obs                                                 |
+|------------------|------------------------------------------------|-----------------------------------------------------|
+| __main__         | Inicializa classe HTTPTrafficAnalyzer          | Função inicial                                      |
+| analyze_packet   | Processa o pacote individualmente              |                                                     |
+|                  |                                                |                                                     |
+| analyze_pcap     | Realiza leitura do arquivo `.pcap`             | Quando há um arquivo `.pcap`                        |
+|                  |                                                |                                                     |
+| choose_interface | Escolhe a interface de rede que será analisada | Quando não é informado arquivo `.pcap` ou interface |
+| analyze_live     | Realizar scan da interface por X segundos      |                                                     |
+
+### Funções principais
+
+| Função                     | Descrição                                                                                                                   |
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| print_summary              | Gera métricas simplificadas, escritas no terminal                                                                           |
+|                            |                                                                                                                             |
+| create_unified_html_report | Gera HTML do relatório completo, unificando templates e funções auxiliares                                                  |
+|                            |                                                                                                                             |
+| _generate_security_alerts  | Verifica se tem algum pacote com falha de segurança e atribui um status para o sistema. Ex: "Normal", "Tráfego Anormal"..." |
+| _generate_security_section | Gera o HTML dos alertas (se existir)                                                                                        |
+|                            |                                                                                                                             |
+| _generate_statistics       | Calcula tamanho dos pacotes, tráfego e portas...                                                                            |
+| _generate_stats_cards      | Gera o HTML das estátisticas                                                                                                |
+|                            |                                                                                                                             |
+| _generate_ip_table_rows    | Gera os registros da tabela de IPs mais utilizados                                                                          |
+| _generate_ports_table_rows | Gera os registros da tabela das portas mais utilizadas                                                                      |
+|                            |                                                                                                                             |
+| detect_traffic_spike       | Detecta se o volume em determinado ponto é incomum                                                                          |
+| _get_service_type          | Mapeia a porta para um tipo específico                                                                                      |
+| _format_bytes              | Formata os bytes para medidas mais amigáveis, como KB, MB, GB...                                                            |
 
 ---
 
