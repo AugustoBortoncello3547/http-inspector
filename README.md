@@ -91,7 +91,7 @@ Todo o código vai estar dividido dentro da classe **HTTPTrafficAnalyzer**, segr
 | choose_interface | Escolhe a interface de rede que será analisada | Quando não é informado arquivo `.pcap` ou interface |
 | analyze_live     | Realizar scan da interface por X segundos      |                                                     |
 
-### Funções principais
+### Funções auxiliares
 
 | Função                     | Descrição                                                                                                                   |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------|
