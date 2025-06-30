@@ -29,14 +29,25 @@ O projeto foi desenvolvido em ambiente acadêmico, na cadeira de Redes para o cu
 - Python 3.8 ou superior
 
 - Bibliotecas Python:
+  - Instale o scapy, plotly e jinja2
 
   ```bash
-  pip install scapy
+  pip install -r requirements.txt
   ```
 
 - No **Windows**:
 
   - Instale o [Npcap](https://nmap.org/npcap/) com a opção `WinPcap API-compatible mode`
+
+---
+
+## 📦 Bibliotecas e utilização
+
+- **scapy**: captura e análise dos pacotes da rede
+  
+- **plotly**: criação de gráficos para visualização das métricas
+  
+- **jinja2**: geração do HTML, utilizando templates
 
 ---
 
@@ -64,6 +75,12 @@ python main.py --iface "Realtek Gaming GbE Family Controller" --timeout 30
 
 ---
 
+## 🗂️ Divisão do código
+
+
+
+---
+
 ## 🧾 Licença
 
 Este projeto é open source sob a licença MIT.
@@ -72,4 +89,4 @@ Este projeto é open source sob a licença MIT.
 
 ## 👨‍💻 Autor
 
-Desenvolvido por Augusto Zanesco Bortoncello e Gabriel Gallina Moscone como parte de um projeto acadêmico para a cadeira de Redes no curdo de Ciência da Computação.
+Desenvolvido por Augusto Zanesco Bortoncello e Gabriel Gallina Moscone como parte de um projeto acadêmico para a cadeira de Redes no curso de Ciência da Computação.
