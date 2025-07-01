@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Destacar linhas da tabela ao passar o mouse
     const tableRows = document.querySelectorAll('.data-table tr');
     tableRows.forEach(row => {
         row.addEventListener('mouseenter', function() {
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Animação suave para métricas
     const metricCards = document.querySelectorAll('.metric-card');
     metricCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
