@@ -1,4 +1,3 @@
- // Adicionar interatividade simples
 document.addEventListener('DOMContentLoaded', function() {
     // Destacar linhas da tabela ao passar o mouse
     const tableRows = document.querySelectorAll('.data-table tr');
