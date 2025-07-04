@@ -114,6 +114,36 @@ Todo o código vai estar dividido dentro da classe **HTTPTrafficAnalyzer**, segr
 
 ---
 
+## 🧑‍🏭Funcionalidades do relatório
+
+| Métrica                               | Descrição       |
+|---------------------------------------|-----------------|
+| Requisições HTTP                      |                 |
+| IPs únicos                            |                 |
+| Total de pacotes                      |                 |
+| Pacotes malformatados                 | Explicar regras |
+| Volume total                          |                 |
+|                                       |                 |
+| **Gráficos Interativos**              |                 |
+| Top 10 IPs por requisições            |                 |
+| Top 10 portas mais utilizadas         |                 |
+| Distribuição do tamanho dos pacotes   |                 |
+| Volume de tráfego por IP              |                 |
+| Timeline de tráfego                   |                 |
+| Comparação de protocolos              |                 |
+|                                       |                 |
+| **Alertas de segurança**              |                 |
+| Add todas variações e explicar regras |                 |
+|                                       |                 |
+| **Estatísticas detalhadas**           |                 |
+| Tamanho médio dos pacotes             |                 |
+| Volume total                          |                 |
+| Portas únicas                         |                 |
+|                                       |                 |
+| **Top IPs por atividade**             |                 |
+|                                       |                 |
+| **Análise de portas**                 |                 |
+
 ## 🧾 Licença
 
 Este projeto é open source sob a licença MIT.
