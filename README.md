@@ -116,33 +116,33 @@ Todo o código vai estar dividido dentro da classe **HTTPTrafficAnalyzer**, segr
 
 ## 🧑‍🏭Funcionalidades do relatório
 
-| Métrica                               | Descrição       |
-|---------------------------------------|-----------------|
-| Requisições HTTP                      |                 |
-| IPs únicos                            |                 |
-| Total de pacotes                      |                 |
-| Pacotes malformatados                 | Explicar regras |
-| Volume total                          |                 |
-|                                       |                 |
-| **Gráficos Interativos**              |                 |
-| Top 10 IPs por requisições            |                 |
-| Top 10 portas mais utilizadas         |                 |
-| Distribuição do tamanho dos pacotes   |                 |
-| Volume de tráfego por IP              |                 |
-| Timeline de tráfego                   |                 |
-| Comparação de protocolos              |                 |
-|                                       |                 |
-| **Alertas de segurança**              |                 |
-| Add todas variações e explicar regras |                 |
-|                                       |                 |
-| **Estatísticas detalhadas**           |                 |
-| Tamanho médio dos pacotes             |                 |
-| Volume total                          |                 |
-| Portas únicas                         |                 |
-|                                       |                 |
-| **Top IPs por atividade**             |                 |
-|                                       |                 |
-| **Análise de portas**                 |                 |
+| Métrica                                   | Descrição                                                                                                                                                                         |
+|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Requisições HTTP                          | Contagem da quantidade de requisições HTTP                                                                                                                                        |
+| IPs únicos                                | Contagem da quantidade de IPs diferentes detectados                                                                                                                               |
+| Total de pacotes                          | Quantidade total de pacotes detectados                                                                                                                                            |
+| Pacotes malformatados                     | **Explicar regras**                                                                                                                                                               |
+| Volume total                              | Volume total de todos pacotes somado                                                                                                                                              |
+|                                           |                                                                                                                                                                                   |
+| **Gráficos Interativos**                  |                                                                                                                                                                                   |
+| Top 10 IPs por requisições                | Gráfico com os 10 IPs mais utilizados                                                                                                                                             |
+| Top 10 portas mais utilizadas             | Gráfico com as 10 portas mais utilizadas                                                                                                                                          |
+| Distribuição do tamanho dos pacotes       | Contagem dos pacotes agrupados pelo tamanho                                                                                                                                       |
+| Volume de tráfego por IP                  |                                                                                                                                                                                   |
+| Timeline de tráfego                       | Distribuição da quantidade de pacotes recebidos ao longo do tempo                                                                                                                 |
+| Comparação de protocolos                  | Distribuição dos protocolos utilizados                                                                                                                                            |
+|                                           |                                                                                                                                                                                   |
+| **Alertas de segurança**                  |                                                                                                                                                                                   |
+| **Add todas variações e explicar regras** |                                                                                                                                                                                   |
+|                                           |                                                                                                                                                                                   |
+| **Estatísticas detalhadas**               |                                                                                                                                                                                   |
+| Tamanho médio dos pacotes                 | Média do tamanho dos pacotes                                                                                                                                                      |
+| Volume total                              | Volume total de todos pacotes somado                                                                                                                                              |
+| Portas únicas                             | Quantidade total de portas diferentes detectadas                                                                                                                                  |
+|                                           |                                                                                                                                                                                   |
+| **Top IPs por atividade**                 | Tabela listando os IPs mais utilizados, com a informação da: posição, IP, quantidade de requisições, Volume total dos pacotes, porcentagem da quantidade total de pacotes, status |
+|                                           |                                                                                                                                                                                   |
+| **Análise de portas**                     | Tabela listando as portas mais utilizadas, com a informação da: porta de origem, porta destino, quantidade de conexões e tipo de serviço                                          |
 
 ## 🧾 Licença
 
