@@ -29,6 +29,7 @@ O projeto foi desenvolvido em ambiente acadêmico, na cadeira de Redes para o cu
 - Python 3.8 ou superior
 
 - Bibliotecas Python:
+
   - Instale o scapy, plotly e jinja2
 
   ```bash
@@ -44,9 +45,7 @@ O projeto foi desenvolvido em ambiente acadêmico, na cadeira de Redes para o cu
 ## 📦 Bibliotecas e utilização
 
 - **scapy**: captura e análise dos pacotes da rede
-  
 - **plotly**: criação de gráficos para visualização das métricas
-  
 - **jinja2**: geração do HTML, utilizando templates
 
 ---
@@ -82,8 +81,8 @@ Todo o código vai estar dividido dentro da classe **HTTPTrafficAnalyzer**, segr
 ### Funções principais
 
 | Função           | Descrição                                      | Obs                                                 |
-|------------------|------------------------------------------------|-----------------------------------------------------|
-| __main__         | Inicializa classe HTTPTrafficAnalyzer          | Função inicial                                      |
+| ---------------- | ---------------------------------------------- | --------------------------------------------------- |
+| **main**         | Inicializa classe HTTPTrafficAnalyzer          | Função inicial                                      |
 | analyze_packet   | Processa o pacote individualmente              |                                                     |
 |                  |                                                |                                                     |
 | analyze_pcap     | Realiza leitura do arquivo `.pcap`             | Quando há um arquivo `.pcap`                        |
@@ -93,42 +92,42 @@ Todo o código vai estar dividido dentro da classe **HTTPTrafficAnalyzer**, segr
 
 ### Funções auxiliares
 
-| Função                     | Descrição                                                                                                                   |
-|----------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| print_summary              | Gera métricas simplificadas, escritas no terminal                                                                           |
-|                            |                                                                                                                             |
-| create_unified_html_report | Gera HTML do relatório completo, unificando templates e funções auxiliares                                                  |
-|                            |                                                                                                                             |
-| _generate_security_alerts  | Verifica se tem algum pacote com falha de segurança e atribui um status para o sistema. Ex: "Normal", "Tráfego Anormal"..." |
-| _generate_security_section | Gera o HTML dos alertas (se existir)                                                                                        |
-|                            |                                                                                                                             |
-| _generate_statistics       | Calcula tamanho dos pacotes, tráfego e portas...                                                                            |
-| _generate_stats_cards      | Gera o HTML das estátisticas                                                                                                |
-|                            |                                                                                                                             |
-| _generate_ip_table_rows    | Gera os registros da tabela de IPs mais utilizados                                                                          |
-| _generate_ports_table_rows | Gera os registros da tabela das portas mais utilizadas                                                                      |
-|                            |                                                                                                                             |
-| detect_traffic_spike       | Detecta se o volume em determinado ponto é incomum                                                                          |
-| _get_service_type          | Mapeia a porta para um tipo específico                                                                                      |
-| _format_bytes              | Formata os bytes para medidas mais amigáveis, como KB, MB, GB...                                                            |
+| Função                      | Descrição                                                                                                                   |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| print_summary               | Gera métricas simplificadas, escritas no terminal                                                                           |
+|                             |                                                                                                                             |
+| create_unified_html_report  | Gera HTML do relatório completo, unificando templates e funções auxiliares                                                  |
+|                             |                                                                                                                             |
+| \_generate_security_alerts  | Verifica se tem algum pacote com falha de segurança e atribui um status para o sistema. Ex: "Normal", "Tráfego Anormal"..." |
+| \_generate_security_section | Gera o HTML dos alertas (se existir)                                                                                        |
+|                             |                                                                                                                             |
+| \_generate_statistics       | Calcula tamanho dos pacotes, tráfego e portas...                                                                            |
+| \_generate_stats_cards      | Gera o HTML das estátisticas                                                                                                |
+|                             |                                                                                                                             |
+| \_generate_ip_table_rows    | Gera os registros da tabela de IPs mais utilizados                                                                          |
+| \_generate_ports_table_rows | Gera os registros da tabela das portas mais utilizadas                                                                      |
+|                             |                                                                                                                             |
+| detect_traffic_spike        | Detecta se o volume em determinado ponto é incomum                                                                          |
+| \_get_service_type          | Mapeia a porta para um tipo específico                                                                                      |
+| \_format_bytes              | Formata os bytes para medidas mais amigáveis, como KB, MB, GB...                                                            |
 
 ---
 
 ## 🧑‍🏭Funcionalidades do relatório
 
 | Métrica                                   | Descrição                                                                                                                                                                         |
-|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Requisições HTTP                          | Contagem da quantidade de requisições HTTP                                                                                                                                        |
 | IPs únicos                                | Contagem da quantidade de IPs diferentes detectados                                                                                                                               |
 | Total de pacotes                          | Quantidade total de pacotes detectados                                                                                                                                            |
-| Pacotes malformatados                     | **Explicar regras**                                                                                                                                                               |
+| Pacotes malformatados                     | Pacotes que possuem flags TCP fora do intervalo válido (0 a 255)                                                                                                                  |
 | Volume total                              | Volume total de todos pacotes somado                                                                                                                                              |
 |                                           |                                                                                                                                                                                   |
 | **Gráficos Interativos**                  |                                                                                                                                                                                   |
 | Top 10 IPs por requisições                | Gráfico com os 10 IPs mais utilizados                                                                                                                                             |
 | Top 10 portas mais utilizadas             | Gráfico com as 10 portas mais utilizadas                                                                                                                                          |
 | Distribuição do tamanho dos pacotes       | Contagem dos pacotes agrupados pelo tamanho                                                                                                                                       |
-| Volume de tráfego por IP                  |                                                                                                                                                                                   |
+| Volume de tráfego por IP                  | Representa a quantidade total de dados (em bytes) transmitidos por cada endereço IP de origem durante a captura de pacotes.                                                       |
 | Timeline de tráfego                       | Distribuição da quantidade de pacotes recebidos ao longo do tempo                                                                                                                 |
 | Comparação de protocolos                  | Distribuição dos protocolos utilizados                                                                                                                                            |
 |                                           |                                                                                                                                                                                   |
@@ -143,6 +142,24 @@ Todo o código vai estar dividido dentro da classe **HTTPTrafficAnalyzer**, segr
 | **Top IPs por atividade**                 | Tabela listando os IPs mais utilizados, com a informação da: posição, IP, quantidade de requisições, Volume total dos pacotes, porcentagem da quantidade total de pacotes, status |
 |                                           |                                                                                                                                                                                   |
 | **Análise de portas**                     | Tabela listando as portas mais utilizadas, com a informação da: porta de origem, porta destino, quantidade de conexões e tipo de serviço                                          |
+
+## 📊 Fluxo do Sistema
+
+Esta imagem demostra o fluxo das chamadas das principais funções do código desenvolvido. Não foram mapeadas funções internas de bibliotecas, apenas funções desenvolvidas pelos alunos.
+
+![Fluxograma do HTTP Traffic Analyzer](docs-images/fluxograma-http-inspector.svg)
+
+---
+
+## 📊 Imagens do relatório gerado pelo programa
+
+![Imagem 1 relatorio](docs-images/evidencia-1.png)
+
+![Imagem 2 relatorio](docs-images/evidencia-2.png)
+
+![Imagem 3 relatorio](docs-images/evidencia-3.png)
+
+---
 
 ## 🧾 Licença
 

@@ -54,7 +54,6 @@ class HTTPTrafficAnalyzer:
         return [ip for ip, volume in self.traffic_volume.items() if volume > threshold * 1000]
 
     def create_unified_html_report(self, filename="relatorio_trafego_completo.html"):
-        
         fig = make_subplots(
             rows=3, cols=2,
             subplot_titles=(
