@@ -109,7 +109,7 @@ class HTTPTrafficAnalyzer:
                 )
 
         if self.packet_timestamps:
-            timestamps_formatted = [datetime.fromtimestamp(ts) for ts in self.packet_timestamps]
+            timestamps_formatted = [datetime.fromtimestamp(float(ts)) for ts in self.packet_timestamps]
             fig.add_trace(
                 go.Scatter(x=timestamps_formatted, y=list(range(len(timestamps_formatted))),
                           mode='lines+markers', name="Timeline de Pacotes",
