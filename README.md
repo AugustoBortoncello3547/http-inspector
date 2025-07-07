@@ -142,7 +142,7 @@ Todo o código vai estar dividido dentro da classe **HTTPTrafficAnalyzer**, segr
 | Volume total                        | Volume total de todos pacotes somado                                                                                                                                              |
 | Portas únicas                       | Quantidade total de portas diferentes detectadas                                                                                                                                  |
 |                                     |                                                                                                                                                                                   |
-| **Top IPs por atividade**           | Tabela listando os IPs mais utilizados, com a informação da: posição, IP, quantidade de requisições, Volume total dos pacotes, porcentagem da quantidade total de pacotes, status |
+| **Top IPs por atividade**           | Tabela listando os IPs mais utilizados, com a informação da: posição, IP, quantidade de requisições, Volume total dos pacotes, porcentagem da quantidade total de pacotes, status (Alto > 1MB, Médio > 100KB e Normal <= 100 KB) |
 |                                     |                                                                                                                                                                                   |
 | **Análise de portas**               | Tabela listando as portas mais utilizadas, com a informação da: porta de origem, porta destino, quantidade de conexões e tipo de serviço                                          |
 |                                     |
